@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  webapieshop:
+    image: ${DOCKER_REGISTRY-}webapieshop
+    build:
+      context: .
+      dockerfile: WebAPIeshop/Dockerfile
+    ports:
+        - "8084:80"
+
